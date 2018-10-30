@@ -55,7 +55,7 @@ func get_difference_of_times (start : Date, end : Date) -> () {
     print("Difference is \(components.minute ?? 0) minutes, \(components.second ?? 0) seconds and \(components.nanosecond ?? 0) nanoseconds.")
 }
 
-if CommandLine.argc == 1 {
+if CommandLine.argc < 3 {
     let contents = try NSString(contentsOfFile: CommandLine.arguments[1], encoding: String.Encoding.utf8.rawValue)
         read_file(contents: contents)
 } else {
